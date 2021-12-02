@@ -10,6 +10,6 @@
 
 ### Day 1
 * Studied recursion
-** Types of recursion
-** Tracing Recursion
-** Time Complexity
+* Types of recursion
+* Tracing Recursion
+* Time Complexity
