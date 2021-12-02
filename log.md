@@ -7,3 +7,9 @@
 * Github repo set up
 * Revised basic C and C++ concepts
 * Revised few Algorithms like QuickSort ans Strassen's matrix multiplication
+
+### Day 1
+* Studied recursion
+** Types of recursion
+** Tracing Recursion
+** Time Complexity
