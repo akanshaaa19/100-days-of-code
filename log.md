@@ -9,7 +9,11 @@
 * Revised few Algorithms like QuickSort ans Strassen's matrix multiplication
 
 ### Day 1
-* Studied recursion
-* Types of recursion
+* Studied Recursion
+* Types of Recursion
 * Tracing Recursion
 * Time Complexity
+
+### Day 2
+* Practiced basic Recursion uestions
+* Studied Sorting Algorithms
