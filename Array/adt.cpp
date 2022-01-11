@@ -2,50 +2,86 @@
 #include <stdlib.h>
 using namespace std;
 
-class Arr{
-    public:
-    int *A;
-    int size;
-    int length;
-    Arr(int n){
-        size=n;
-        A= new int[size];
+void insert(int *A, int n, int index, int key){
+    for(int i=n; i>index; i--){
+        A[i]=A[i-1];
     }
-    int getLength(){
-        return sizeof(A)/sizeof(int);
+    A[index]=key;
+    n++;
+}
+
+void append(int *A, int n, int key){
+    A[n]=key;
+    n++;
+}
+void display(int *A, int n){
+    //int n= sizeof(A)/sizeof(A[0]);
+    for (int  i = 0; i < n; i++)
+    {
+        cout<<A[i];
+        cout<<endl;
     }
-    void display(){
-        int i;
-        length=getLength();
-        for(i=0; i<length; i++){
-            cout<<A[i]<<endl;
+    
+}
+void del(int *A, int n, int index){
+    for(int i=index; i<n; i++){
+        A[i]=A[i+1];
+    }
+    n--;
+}
+int linearSearch(int *A, int n, int key){    // done  
+    for(int i=0; i<n; i++){                  // O(n)
+        if(key==i){
+            return i;
         }
     }
-    void append(int x){
-        length=getLength();
-        if(length==size){
-            cout<<"ERROR: array already full"<<endl;
+    return -1;
+}
+
+int binarySearch(int *A, int n, int key){
+    int high, low, mid;
+    low=0;
+    high=n-1;
+    while(low<=high){
+        mid=(high+low)/2;
+        int guess= A[mid];
+        if(guess==key){
+            return mid;
+        }
+        if(key>guess){
+            low=mid+1;
         }
         else{
-            A[length]=x;
+            high=mid-1;
         }
-    
-};
-    void insert(int x, int index);
-    void deletionByIndex(int index);
-    void deletionByValue(int x);
-    bool search(int x);
-    int * reverse();
-    int max();
-    int min();
-    int getIndex();
-};
+    }
+    return -1;
+}
+int max(int *A, int n){
+    int max=A[0];
+    for(int i=1; i<n; i++){
+        if(max<A[i]){
+            max=A[i];
+        }
+    }
+    return max;
+}
+int avg(int *A, int n){
+    int sum=0; 
+    for(int i=0; i<n; i++){
+        sum=sum+A[i];
+    }
+    return sum/n;
+}
 
 int main(){
-    int n;
-    cout<<"Enter array size";
-    cin>>n;
-    Arr arr(n);
-    arr.A[0]=1;
-    arr.A[1]=2;
+    int A[]={0, 1, 2, 3, 4};
+        //   0   1  2   3  4   5   6   7   8
+        //0, 1, 2, 3, 4, 56, 89, 90, 102  
+    int n= sizeof(A)/sizeof(A[0]);
+    //display(A, n);
+    //del(A, n, 3);
+    //cout<<"here"<<endl;
+    //display(A, n);
+    cout<<avg(A, n);
 }

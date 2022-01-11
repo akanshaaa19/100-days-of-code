@@ -9,10 +9,10 @@ void printArray(int *a, int n){
 }
 
 int * insertionSort(int *a, int n){
-    int i, key, j;
+    int i;
     for(i=1; i<n; i++){
-        key=a[i];
-        j=i-1;
+        int key=a[i];
+        int j=i-1;
         while(j>=0 && a[j]>key){
             a[j+1]=a[j];
             j--;
