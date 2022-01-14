@@ -22,3 +22,8 @@
 
 ### Day 3
 * Studied Strings
+
+
+### Day 4
+* Studied about linked lists
+* insertions, deletion and sorting
