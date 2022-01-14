@@ -1,15 +1,17 @@
+// Program to change covert lowercase to uppercase, uppercase to lowercase and toggle.
+
 #include <iostream>
 using namespace std;
 
 char * lowerToUpper(char *A){
-    for(int i=0; A[i]!=0; i++){
+    for(int i=0; A[i]!='\0'; i++){
         A[i]=A[i]-32;
     }
     return A;
 }
 
 char * upperToLower(char *A){
-    for(int i=0; A[i]!=0; i++){
+    for(int i=0; A[i]!='\0'; i++){
         A[i]=A[i]+32;
     }
     return A;

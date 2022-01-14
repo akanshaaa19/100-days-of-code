@@ -15,5 +15,10 @@
 * Time Complexity
 
 ### Day 2
-* Practiced basic Recursion uestions
-* Studied Sorting Algorithms
+* Studied Arrays
+* 2-D array- (declaration, row major and column major formulas)
+* Arrat ADT - (insertion, deletion, searching)
+* max(), min(), avg(), get(), set(), reverse(),
+
+### Day 3
+* Studied Strings

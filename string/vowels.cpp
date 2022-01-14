@@ -17,7 +17,7 @@ char * toLower(char *A){
 void count(char *A){
     toUpper(A);
     int vcount=0, ccount=0;
-    for(int i=0; A[i]!=0; i++){
+    for(int i=0; A[i]!='\0'; i++){
         if(A[i]=='A' || A[i]=='E' || A[i]=='I' || A[i]=='O' || A[i]=='U'){
             vcount++;
         }
